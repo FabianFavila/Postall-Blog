@@ -19,7 +19,11 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <section class="row">
+    <div class="small-4 columns">
+      <div class="actions">
+        <%= f.submit 'Aceptar', :class => 'button small' %>
+      </div>
+    </div>
+  </section>
 <% end %>

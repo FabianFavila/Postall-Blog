@@ -1,7 +1,7 @@
 <div class="top-bar">
   <div class="top-bar-left">
     <ul id="menuLeft" class="menu">
-      <li class="menu-text">Feisbuk</li>
+      <li class="menu-text">Postall</li>
       <li><%= link_to 'Home', posts_path %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'New Post', new_post_path %></li>
@@ -11,11 +11,11 @@
   <div class="top-bar-right">
     <ul id="menuRight" class="menu">
       <% if user_signed_in? %>
-        <li>Logged in as <strong><%= current_user.email %></strong></li>
+        <li>Registrado como <strong><%= current_user.email %></strong></li>
         <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
         <li><%= link_to 'Logout', destroy_user_session_path,method: :delete %></li>
       <% elsif admin_signed_in? %>
-        <li>Logged in as <strong><%= current_admin.email %></strong></li>
+        <li>Administrador registrado como <strong><%= current_admin.email %></strong></li>
         <li><%= link_to 'Edit profile', edit_admin_registration_path %></li>
         <li><%= link_to 'Logout', destroy_admin_session_path,method: :delete %></li>
       <% else %>

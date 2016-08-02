@@ -23,7 +23,7 @@
         <td><%= post.title %></td>
         <td>
           <% if post.body.length > 0 %>
-            <a href="#" data-open="body-<%= post.id %>">Ver mas...</a>
+            <a data-open="body-<%= post.id %>">Ver mas...</a>
             <div id="body-<%= post.id %>" class="reveal" data-reveal>
               <%= post.body %>
               <button class="close-button" data-close aria-label="cerrar" type="button">
@@ -35,7 +35,7 @@
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <% if admin_signed_in? %>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
         <td><%= User.find(post.user_id).email %></td>
         <% end %>
       </tr>
